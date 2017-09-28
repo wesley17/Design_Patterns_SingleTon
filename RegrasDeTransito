@@ -1,0 +1,21 @@
+# Design_Patterns_SingleTon
+
+public class regrasDeTransito {
+	private static regrasDeTransito RegrasDeTransito;
+	
+	public double valorDaMulta=100.00;
+	
+	private regrasDeTransito(){
+		
+	}
+	
+	public static synchronized regrasDeTransito getInstance(){
+		if(RegrasDeTransito == null){
+			RegrasDeTransito = new regrasDeTransito();
+			
+		}
+		return RegrasDeTransito;
+	}
+	
+	
+}
